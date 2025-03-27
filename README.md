@@ -72,13 +72,16 @@ The actual tracking (implemented in the ```defense-system.py``` is more complex,
 
 - The face will then be tracked until it disappears for over 1 second (and gets removed from the list), this is done because the algorithm isnt perfect and sometimes for a split second it wont recognize the face, this is due to a slight change in lighting, position, or whatever, therefore if a face isnt recognized for a short moment, for example if the user turns around, the tracking wont be lost and wont have to restart again.
 
-- If the confidence is below a certain level, the face will simply be named "Unknown", if a face is unknown for over 2.5 seconds it's most likely that the person is an intruder, therefore the face is added to a ```permanent hostile``` list and will receive a heavy punishment. The system will start a sniper-like precise tracking and will fetch the exact coordinates of the face, the coorinates are based on the frame width of the camera, therefore if you use a different camera than me, then you will have to set some stuff on your own. The defense system which will """send""" flying """objects""" towards that intruder.
+- If the confidence is below a certain level, the face will simply be named "Unknown", if a face is unknown for over 2.5 seconds it's most likely that the person is an intruder, therefore the face is added to a ```permanent hostile``` list and will receive a heavy punishment. The system will start a sniper-like precise tracking and will fetch the exact coordinates of the face, the coorinates are based on the frame width of the camera, therefore if you use a different camera than me, then you will have to set some stuff on your own.
 
 - The hostile face is lost after 1 second of no detection, meaning the intruder is probably gone, which means it's then removed from the hostile list and the face recognizer algorithm will start again. The code ends if u press "q".
 
 #### - Arduino Commands
 
-aa
+First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that's easily resolved looking it up on google. Before the actual code several things need to be setup: the board, the Stepper motor pins, steps and variables, the Servo motors pins, the relay, the camera, the face-recognizer-related modules, and of course all the paths and other variables. 
+
+- The Stepper motor controls the movements from left to right (x axis) of the defense system, its movement is controlled by the ```StepperPoint function```
+- Servo1...
 
   </p>
   
@@ -87,7 +90,7 @@ aa
 ---
 
 <details style="margin-bottom: 1px;" > 
-  <summary><h1> ⚙ Physics and Robotic implementation... </h1></summary>
+  <summary><h1> ⚙ Engeneering and Robotic implementation... </h1></summary>
   <p align="left">
 
 
