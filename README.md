@@ -80,7 +80,8 @@ The actual tracking (implemented in the ```defense-system.py``` is more complex,
 
 First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that's easily resolved looking it up on google. Before the actual code several things need to be setup: the board, the Stepper motor pins, steps and variables, the Servo motors pins, the relay, the camera, the face-recognizer-related modules, and of course all the paths and other variables. 
 
-- The Stepper motor controls the movements from left to right (x axis) of the defense system, its movement is controlled by the ```StepperPoint function```
+- The first Servo motor controls the top to bottom movement of the system, its controlled by the ```ServoPoint function```, this function uses numpy library to calculate the right angle given the coordinates of the face, the width of the camera frame, and the a given "angle range", which i set to 45/125 as default.
+- The Stepper motor controls the movements from left to right (x axis) of the defense system, its movement is controlled by the ```StepperPoint function```, because stepper motors work differently from servo motors, i had to use a different approach: first of all the starting point is calculated as the middle point between the furthest point to the left and the furthest from the right that the stepper can reach (technically stepper motor can rotate 360° as many times as they want, that's why i had to set these boundaries and start rotating the motor from them), second of all we calculate the angle we must reach based on the x coordinates, the width of the frame and the overall angle range (must be 180°). Then using this angle we calculate the amount of steps needed to reach that spot (considering also a thresold to avoid small changes every time) and finally we move the stepper to match those steps
 - Servo1...
 
   </p>
@@ -92,6 +93,9 @@ First of all i'm gonna use PyMata library as PyFirmata is difficult to use with 
 <details style="margin-bottom: 1px;" > 
   <summary><h1> ⚙ Engeneering and Robotic implementation... </h1></summary>
   <p align="left">
+
+    
+ This angle range must be modified based on real life conditions, for example if the system and the camera are far away from the face, the angle will have to be smaller (like 70/100) because a light change in the angle will result in a huge difference in the overall path of the projectile (if the distance is long enough).      
 
 
 <img align="right" src="media/2.jpg" width="330" />
