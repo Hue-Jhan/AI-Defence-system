@@ -57,13 +57,13 @@ You can get most of these parts on Aliexpress for very cheap prices.
 
 This system is based on the Haarscade model, which has to be trained first, i explained the way this model works on [my previous repo](https://github.com/Hue-Jhan/AI-Face-Recognition-n-Tracking), it's divided in 2 codes, what it does is simply detecting and training on faces using a locally stored "binary pattern histogram" model called Haarscade, made by a German professor. This algorithm recognizes patterns in grey-scale images (taken previously) to detect faces, and the rest of the code starts tracking them. It also detects hostile faces if they are not associated with a pre-made user. Here are the all the codes explained:
 
-##### - Data Collect.py
+#### - Data Collect.py
 The first code takes 500 pics and inserts them into the datasets folder, they are associated to a specific user. It detects the faces using the haarscade model after putting the pics in a grey-scale format.
 
-##### - Training Demo.py
+#### - Training Demo.py
 The second code trains on the previously taken images, more precisely it opens all the previously taken pictures, and for every id (user) it tries to fetch the face unique patterns and stores them into a ```Trainer.yml``` file.
 
-##### - Defense System.py (tracking system)
+#### - Defense System.py (tracking system)
 The actual tracking implemented in the ```defense-system.py``` is more complex, the camera constantly takes pictures and tries to detect faces in them, if a face is associated to a user, it keeps getting tracked until it disappears for 1 second, if a face remains unknown for over 2.5 seconds it's recognized as a hostile face, and its coorinates will then be sent to the motors, here is a more detailed explanation:
 
 - Every second the camera takes various pictures (CV2 library, camera displayed on a custom image), if a face is found, the system will then check if the patterns of the face match the ones of any of the known users (located in Trainer.yml file), this "predictment" has a confidence level which tells us how likely a face is an actual known user's face.
@@ -104,7 +104,9 @@ If you are using a raspberry pi you will need to change lots of stuff like the w
   <p align="left">
 
 
-warnign!!
+warnign!! danger..
+
+
 The system is basically just an automated potato launcher but for smaller and softer fruits like grapes, you can find the 3d files in the ```3d files``` folder, i used Pla+.
 
 #### - Launcher
