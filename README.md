@@ -78,7 +78,13 @@ The actual tracking implemented in the ```defense-system.py``` is more complex, 
 
 #### - Defense System.py (Arduino Board)
 
-First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that can be easily resolved looking it up on google. Before the actual code several things need to be setup: the board, the Stepper motor pins, steps and variables, the Servo motors pins, the relay, the camera, the face-recognizer related modules, and of course all the paths and other variables. If you are using a different camera setup than me (for example an external usb camera) you might have to change some things like the cv2 library commands, ex: ```video = cv2.VideoCapture(0)```. You might also have issues establishing the com port but that's also easily solvable by googling the problem. If you are using a raspberry pi you will need to change lots of stuff like the way the camera sends signal or the PyMata library, in the future i will probably upload a code for the raspberry pi version of the entire system but because i only have a raspberry pi 3b+, training the model might be slow and overall difficult.
+First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that can be easily resolved looking it up on google. 
+
+Before the actual code several things need to be setup: the board, the Stepper motor pins, steps and variables, the Servo motors pins, the relay, the camera, the face-recognizer related modules, and of course all the paths and other variables. If you are using a different camera setup than me (for example an external usb camera) you might have to change some things like the cv2 library commands, ex: ```video = cv2.VideoCapture(0)```. 
+
+You might also have issues establishing the com port but that's also easily solvable by googling the problem. 
+
+If you are using a raspberry pi you will need to change lots of stuff like the way the camera sends signal or the PyMata library, in the future i will probably upload a code for the raspberry pi version of the entire system but because i only have a raspberry pi 3b+, training the model might be slow and overall difficult.
 
 #### - Defense System.py (Motors and modules control)
 
