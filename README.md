@@ -100,10 +100,16 @@ If you are using a raspberry pi you will need to change lots of stuff like the w
 ---
 
 <details style="margin-bottom: 1px;" > 
-  <summary><h1> ⚙ Engeneering and Robotic implementation... </h1></summary>
+  <summary><h1> ⚙ Engeneering and Robotics... </h1></summary>
   <p align="left">
 
-    
+
+warnign!!
+The system is basically just an automated potato launcher but for smaller and softer fruits like grapes, you can find the 3d files in the ```3d files``` folder, i used Pla+.
+
+#### - Launcher
+The launcher works by incjecting gas (from the lighter, you have to remove the zapping system tho) in the combustion chamber (empty shampoo bottle), when the gas is lit by the high voltage generator form the bottom (there's a small hole at the bottom of the bottle where you insert the tube of the lighter and the cables of the high voltage generator), the gas quickly expands and whatever is at the other end of the bottle (where the cap was in the first place) gets quickly pushed away, if you add a pvc pipe at the end, the range and the precision of the projectile will greatly increase.
+
  This angle range must be modified based on real life conditions, for example if the system and the camera are far away from the face, the angle will have to be smaller (like 70/100) because a light change in the angle will result in a huge difference in the overall path of the projectile (if the distance is long enough).      
 
 
