@@ -5,6 +5,10 @@ Arduino based defence system that tracks faces and uses a mini-potato launcher t
 
 click on the different titles to show each section...
 
+header 1 + link
+header 2
+header 3...
+
 ---
 
 <details style="margin-bottom: 1px;" > 
@@ -112,7 +116,8 @@ The system is basically just an automated potato launcher but for smaller and so
 #### - Launcher
 The launcher works by incjecting gas from the lighter (remove the zapping system first tho) in the combustion chamber (empty shampoo bottle) through a small hole at the bottom of the bottle (on the opposite side of the opening cap), you will have to insert the cables of the high voltage generator there too, when the gas is lit by the high voltage generator, it quickly expands and whatever is at the other end of the bottle (where the cap was in the first place) gets quickly pushed away, if you add a pvc pipe at the end, the range and the precision of the projectile will greatly increase.
 
-This angle range must be modified based on real life conditions, for example if the system and the camera are far away from the face, the angle will have to be smaller (like 70/100) because a light change in the angle will result in a huge difference in the overall path of the projectile (if the distance is long enough).      
+This angle range must be modified based on real life conditions, for example if the system and the camera are far away from the face, the angle will have to be smaller (like 70/100) because a light change in the angle will result in a huge difference in the overall path of the projectile (if the distance is long enough).
+
 
 
 <img align="right" src="media/2.jpg" width="330" />
