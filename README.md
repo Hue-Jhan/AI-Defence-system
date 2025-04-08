@@ -126,6 +126,15 @@ This angle range must be modified based on real life conditions, for example if 
 The reloading system simply consists in a servo that slides a metal chamber onto the main (smaller) cannon pipe, when the metal pipe covers the main pipe, the cannon is able to "launch" the payload, after the "launch", the metal chamber slides to the right uncovering a hole in the pipe, the next payload will fall into that hole because the metal pipe won't be holding it anymore, and finally the metal pipe will go back to its original position covering the hole and preparing the system for the next launch.
 
 
+#### - Testing
+
+Because the oxygen to gas ratio is like 90% to 10% the combustion doesn't go off smoothly, or at all sometimes because pouring that specific amount of gas into a small chamber like that is very hard, which means this entire project is useless. I'd have to replace the chamber with a bigger one but that's not a good idea for 100 different and obvious reasons... here is a test i made against an apple:
+
+<img align="right" src="media/" width="500" />
+<img align="right" src="media/" width="500" />
+
+
+
   </p>
   
 </details>
