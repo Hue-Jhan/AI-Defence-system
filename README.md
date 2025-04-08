@@ -18,7 +18,7 @@ Click on the different titles to show each section...
 
 The 3d files are located in the `3d files` folder. Remember that you can get most of these parts on Aliexpress for very cheap prices.
 
-##### - Robotic parts:
+#### - Robotic parts:
 - PC and 3d printer;
 - 2 SG90 servo motors;
 - 1 MG996R servo motor;
@@ -32,7 +32,7 @@ The 3d files are located in the `3d files` folder. Remember that you can get mos
 - Laser pointer (not required)
 - Jumpers, cables, screws, tape, hot glue and other stuff;
 
-##### - Non-robotic parts:  
+#### - Non-robotic parts:  
 - 1 needle; <img align="right" src="media/aifs-gaz.jpg" width="500" />
 - 1 lighter;
 - Empty shampoo bottle;
@@ -40,7 +40,7 @@ The 3d files are located in the `3d files` folder. Remember that you can get mos
 - Short metal pipe that fits on the outside of the pvc pipe (i took one out of an e-cig);
 - Grapes or any small (but soft) fruits that fit into the pipe;
 
-##### - Alternatively, if you want to run this project anywhere:
+#### - Alternatively, if you want to run this project anywhere:
 - Replace the PC and the Arduino Controller with a raspberry pi (at least raspberry 3 imo);
 - Usb camera;
 - 5v output Powerbank;
@@ -51,6 +51,7 @@ The 3d files are located in the `3d files` folder. Remember that you can get mos
 - First you need to hot-glue the pvc pipe to the shampoo bottle, that will be the combustion chamber. Then make a small hole on the bottom of the shampoo bottle using the needle, this hole will fit the hv generator cables and the small tube of the lighter which will inject gas into the chamber. Then struck the needle in between the pipe so that if anything falls from the open end of the pipe it won't enter the combustion chamber. 
 - Then print all the 3d printed parts and assemble them, the second_arm_holder goes onto the metal pipe, the main arm holder goes onto the main pvc pipe (attached to the chamber), the lighter and the mg996R servo go on the lighter_holder; you will have to hot glue the mag to the main arm, leaving a little bit of space for the metal pipe to slide underneath it and the payloads to fall, the rest is self explanatory.
 - Finally put all the robotic modules at their respective place, attach all the pins to the Arduino Uno and the uno to your pc. I hate soldering so i used a breadboard to share the vcc and gnd pins of my arduino uno. Because the modules require a lot of power i strongly reccomend to use 2 lithium batteries (3.8mah 4.2v) and a buck converter set to 5v like i did in my [spider robot](https://github.com/Hue-Jhan/Arduino-Spider-Bot) project.
+- You can edit the stl files as you wish using softwares like meshinspector if you encounter any problem, i reccomend that software because it's free and it's on browser, there are some features that fusion360 and tinkercad do better but meshinspector is still in my opinion the best 3d files editor.
 
   </p>
   
