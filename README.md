@@ -130,17 +130,21 @@ The reloading system simply consists in a servo that slides a metal chamber onto
 
 Because the oxygen to gas ratio is like 90% to 10% the combustion doesn't go off smoothly, or at all sometimes because pouring that specific amount of gas into a small chamber like that is very hard, which means this entire project is useless. I'd have to replace the chamber with a bigger one but that's not a good idea for 100 different and obvious reasons... here is a test i made against an apple:
 
-<img align="right" src="media/" width="500" />
-<img align="right" src="media/" width="500" />
 
+https://github.com/user-attachments/assets/2dc89907-e1b7-48a8-a346-37327afbab17
+
+As you can see in the image below the bull- ehm i mean the soft and harmless fruit pierced through the apple creating a 1-2 cm hole. I ate the apple afterwards.
+
+<img src="media/apil2.png" width="200" /> 
 
 
   </p>
   
 </details>
 
+---
 
 > [!CAUTION]  
 > DO NOT BUILD this project, do not attempt to recreate it, in fact don't even think of imitating this stuff for an instance!!!!!!!!!!!
-> It is dangerous to work with high voltage modules, flamable gas and similar materials, you could get hurt or put yourself/your house in danger. For this and other reasons do not do anything ive done in this repo, thanks : ) 
+> Also it's very dangerous to work with high voltage modules, flamable gas and similar materials, you could get hurt or put yourself/your house in danger. For this and other reasons do not do anything ive done in this repo, thanks : ) 
 
