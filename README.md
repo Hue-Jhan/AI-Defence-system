@@ -134,9 +134,12 @@ Because the oxygen to gas ratio is like 90% to 10% the combustion doesn't go off
 
 https://github.com/user-attachments/assets/2dc89907-e1b7-48a8-a346-37327afbab17
 
-As you can see in the image below the bull- ehm i mean the soft and harmless fruit pierced through the apple creating a 1-2 cm hole. I ate the apple afterwards.
+<img align="left" src="media/apil2.png" width="200" /> 
 
-<img src="media/apil2.png" width="200" /> 
+As you can see in the image below the bull- ehm i mean the soft and harmless fruit pierced through the apple creating a 1-2 cm hole. I ate the apple afterwards. 
+
+Final considerations: you can a speakers to scare intruders and use the launcher as a last resort move, on raspberry pi you can use custom mp3 files to show, but you can also use the speaker with a simple arduino by converting the audio track into several bytes, and sending them to the speaker, yes the quality will be much worse but that's a small price to pay. You can also add buzzers and led lights to make the whole thing cooler, and finally put all the "external" components into a 3d printed box. I didn't do any of this because i was getting tired of this project.
+
 
 
   </p>
