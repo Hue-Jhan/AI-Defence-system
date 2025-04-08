@@ -1,7 +1,7 @@
 # Arduino AI Defence system
 Arduino based defence system that tracks faces and uses a mini-potato launcher to "throw" food at intruders.
 
-...
+https://github.com/user-attachments/assets/ddba099a-be8b-4aac-bb97-964f8b0f57ca
 
 click on the different titles to show each section...
 
@@ -14,7 +14,7 @@ header 3...
 <details style="margin-bottom: 1px;" > 
   <summary><h1> 🔋 Parts & Robotics... </h2></summary>
   <p align="left">
-     <img align="right" src="media/1.jpg" width="330" />
+     <img align="right" src="media/aifs-pic1.jpg" width="500" />
 
 The 3d files are located in the `3d files` folder. \
 Robotic parts:
@@ -32,9 +32,9 @@ Robotic parts:
 - Jumpers, cables, screws, tape, hot glue and other stuff;
 
 Non-robotic parts:  
-- 1 needle;
+- 1 needle; <img align="right" src="media/aifs-gaz.jpg" width="500" />
 - 1 lighter;
-- Empty shampoo bottle;
+- Empty shampoo bottle; 
 - Long pvc pipe that fits in the bottle;
 - Short metal pipe that fits on the outside of the pvc pipe;
 - Grapes or any small (but soft) fruits that fit into the pipe;
@@ -57,17 +57,18 @@ You can get most of these parts on Aliexpress for very cheap prices.
   <summary><h1> 💻 Code and Machine Learning... </h2></summary>
   <p align="left">
 
-<img align="right" src="media/2.jpg" width="330" />
-
 This system is based on the Haarscade model, which has to be trained first, i explained the way this model works on [my previous repo](https://github.com/Hue-Jhan/AI-Face-Recognition-n-Tracking), it's divided in 2 codes, what it does is simply detecting and training on faces using a locally stored "binary pattern histogram" model called Haarscade, made by a German professor. This algorithm recognizes patterns in grey-scale images (taken previously) to detect faces, and the rest of the code starts tracking them. It also detects hostile faces if they are not associated with a pre-made user. Here are the all the codes explained:
 
-#### - Data Collect.py
+
+<img align="right" src="media/track.gif" width="500" />
+
+#### - Data Collect.py 
 The first code takes 500 pics and inserts them into the datasets folder, they are associated to a specific user. It detects the faces using the haarscade model after putting the pics in a grey-scale format.
 
 #### - Training Demo.py
 The second code trains on the previously taken images, more precisely it opens all the previously taken pictures, and for every id (user) it tries to fetch the face unique patterns and stores them into a ```Trainer.yml``` file.
 
-#### - Defense System.py (tracking system)
+#### - Defense System.py 1/3 (tracking system)
 The actual tracking implemented in the ```defense-system.py``` is more complex, the camera constantly takes pictures and tries to detect faces in them, if a face is associated to a user, it keeps getting tracked until it disappears for 1 second, if a face remains unknown for over 2.5 seconds it's recognized as a hostile face, and its coorinates will then be sent to the motors, here is a more detailed explanation:
 
 - Every second the camera takes various pictures (CV2 library, camera displayed on a custom image), if a face is found, the system will then check if the patterns of the face match the ones of any of the known users (located in Trainer.yml file), this "predictment" has a confidence level which tells us how likely a face is an actual known user's face.
@@ -80,9 +81,9 @@ The actual tracking implemented in the ```defense-system.py``` is more complex, 
 
 - The hostile face is lost after 1 second of no detection, meaning the intruder is probably gone, which means it's then removed from the hostile list and the face recognizer algorithm will start again. The code ends if u press "q".
 
-#### - Defense System.py (Arduino Board)
+#### - Defense System.py 2/3 (Arduino Board)
 
-First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that can be easily resolved looking it up on google. 
+First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that can be easily resolved looking it up on google. <img align="right" src="media/aifs-pic3.jpg" width="400" />
 
 Before the actual code several things need to be setup: the board, the Stepper motor pins, steps and variables, the Servo motors pins, the relay, the camera, the face-recognizer related modules, and of course all the paths and other variables. If you are using a different camera setup than me (for example an external usb camera) you might have to change some things like the cv2 library commands, ex: ```video = cv2.VideoCapture(0)```. 
 
@@ -90,7 +91,7 @@ You might also have issues establishing the com port but that's also easily solv
 
 If you are using a raspberry pi you will need to change lots of stuff like the way the camera sends signal or the PyMata library, in the future i will probably upload a code for the raspberry pi version of the entire system but because i only have a raspberry pi 3b+, training the model might be slow and overall difficult.
 
-#### - Defense System.py (Motors and modules control)
+#### - Defense System.py 3/3 (Motors and modules control)
 
 - The first Servo motor controls the top to bottom movement of the system, its controlled by the ```ServoPoint function```, this function uses numpy library to calculate the right angle given the coordinates of the face, the width of the camera frame, and the a given "angle range", which i set to 45/125 as default.
 - The Stepper motor controls the movements from left to right (x axis) of the defense system, its movement is controlled by the ```StepperPoint function```, because stepper motors work differently from servo motors, i had to use a different approach: first of all the starting point is calculated as the middle point between the furthest point to the left and the furthest from the right that the stepper can reach (technically stepper motor can rotate 360° as many times as they want, that's why i had to set these boundaries and start rotating the motor from them), second of all we calculate the angle we must reach based on the x coordinates, the width of the frame and the overall angle range (must be 180°). Then using this angle we calculate the amount of steps needed to reach that spot (considering also a thresold to avoid small changes every time) and we move the stepper to match those steps. Finally we update the current steps in order to update the starting position for the next cycle.
@@ -124,7 +125,7 @@ This angle range must be modified based on real life conditions, for example if 
 #### - Reloader
 mag + reloader + payload...
 
-<img align="right" src="media/2.jpg" width="330" />
+<img align="right" src="media/reloader.gif" width="500" />
   
 Code....
 
