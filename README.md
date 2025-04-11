@@ -1,5 +1,5 @@
 # Arduino AI Defence system
-Arduino-based defence system that tracks intruders faces and uses a mini-potato launcher to "throw" food at intruders.
+📡 Arduino-based defence system that tracks intruders faces and uses a mini-potato launcher to "throw" food at intruders.
 
 https://github.com/user-attachments/assets/ddba099a-be8b-4aac-bb97-964f8b0f57ca
 
