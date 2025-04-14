@@ -89,7 +89,7 @@ The actual tracking implemented in the ```defense-system.py``` is more complex, 
 
 #### - Defense System.py 2/3 (Arduino Board)
 
-First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that can be easily resolved looking it up on google. You will have to upload the standard Pymata library on your Arduino to make it able to communicate with your pc. <img align="right" src="media/track.gif" width="500" />
+First of all i'm gonna use PyMata library as PyFirmata is difficult to use with a Stepper motor, also there might be an error when sending signals to the Stepper motor but that can be easily resolved looking it up on google. You will have to upload the standard Pymata library on your Arduino to make it able to communicate with your pc. In the footage the launcher looks like it's "lagging" thats not a code issue, i was just not looking at the camera all the time because i had to record it using my phone so it was a bit hard to record the entire thing while looking away. <img align="right" src="media/track.gif" width="500" />
 
 Before the actual code several things need to be setup: the board, the Stepper motor pins, steps and variables, the Servo motors pins, the relay, the camera, the face-recognizer related modules, and of course all the paths and other variables. If you are using a different camera setup than me (for example an external usb camera) you might have to change some things like the cv2 library commands, ex: ```video = cv2.VideoCapture(0)```. 
 
